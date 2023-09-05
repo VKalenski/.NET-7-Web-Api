@@ -8,10 +8,10 @@ global using dotnet_rpg.Data;
 global using dotnet_rpg.Services.FightService;
 global using Microsoft.IdentityModel.Tokens;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.OpenApi.Models;
-using dotnet_rpg.Services.WeaponService;
-using Swashbuckle.AspNetCore.Filters;
-using dotnet_rpg.Infrastructure.Extensions;
+global using Microsoft.OpenApi.Models;
+global using dotnet_rpg.Services.WeaponService;
+global using Swashbuckle.AspNetCore.Filters;
+global using dotnet_rpg.Infrastructure.Extensions;
 #endregion
 
 var builder = WebApplication.CreateBuilder(args);

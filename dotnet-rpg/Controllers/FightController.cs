@@ -1,6 +1,6 @@
 #region Usings
-using dotnet_rpg.Dtos.Fight;
 using Microsoft.AspNetCore.Mvc;
+using dotnet_rpg.Dtos.Fight;
 #endregion
 
 namespace dotnet_rpg.Controllers

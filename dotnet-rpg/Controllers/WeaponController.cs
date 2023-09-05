@@ -1,8 +1,7 @@
 #region Usings
-using dotnet_rpg.Dtos.Weapon;
-using dotnet_rpg.Services.WeaponService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using dotnet_rpg.Dtos.Weapon;
 #endregion
 
 namespace dotnet_rpg.Controllers
