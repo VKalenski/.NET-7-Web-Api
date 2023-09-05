@@ -7,17 +7,22 @@ namespace dotnet_rpg.Services.WeaponService
 {
     public class WeaponService : IWeaponService
     {
+        #region Fields
         private readonly DataContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IMapper _mapper;
+        #endregion
 
+        #region Ctor
         public WeaponService(DataContext context, IHttpContextAccessor httpContextAccessor, IMapper mapper)
         {
             _httpContextAccessor = httpContextAccessor;
             _mapper = mapper;
             _context = context;
         }
+        #endregion
 
+        #region Methods
         public async Task<ServiceResponse<GetCharacterDto>> AddWeapon(AddWeaponDto newWeapon)
         {
             var response = new ServiceResponse<GetCharacterDto>();
@@ -55,5 +60,6 @@ namespace dotnet_rpg.Services.WeaponService
 
             return response;
         }
+        #endregion
     }
 }

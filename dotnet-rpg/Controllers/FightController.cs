@@ -1,5 +1,7 @@
+#region Usings
 using dotnet_rpg.Dtos.Fight;
 using Microsoft.AspNetCore.Mvc;
+#endregion
 
 namespace dotnet_rpg.Controllers
 {
@@ -13,6 +15,15 @@ namespace dotnet_rpg.Controllers
             _fightService = fightService;
         }
 
+        #region GET
+        [HttpGet]
+        public async Task<ActionResult<ServiceResponse<List<HighscoreDto>>>> GetHighscore()
+        {
+            return Ok(await _fightService.GetHighscore());
+        }
+        #endregion
+
+        #region POST
         [HttpPost("Weapon")]
         public async Task<ActionResult<ServiceResponse<AttackResultDto>>> WeaponAttack(WeaponAttackDto request)
         {
@@ -30,11 +41,6 @@ namespace dotnet_rpg.Controllers
         {
             return Ok(await _fightService.Fight(request));
         }
-
-        [HttpGet]
-        public async Task<ActionResult<ServiceResponse<List<HighscoreDto>>>> GetHighscore()
-        {
-            return Ok(await _fightService.GetHighscore());
-        }
+        #endregion
     }
 }

@@ -1,5 +1,6 @@
 namespace dotnet_rpg.Models
 {
+    #region Properties Weapon
     public class Weapon
     {
         public int Id { get; set; }
@@ -8,4 +9,5 @@ namespace dotnet_rpg.Models
         public Character? Character { get; set; }
         public int CharacterId { get; set; }
     }
+    #endregion
 }

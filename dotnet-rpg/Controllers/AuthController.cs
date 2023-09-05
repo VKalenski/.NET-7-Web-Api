@@ -1,5 +1,7 @@
+#region Usings
 using dotnet_rpg.Dtos.User;
 using Microsoft.AspNetCore.Mvc;
+#endregion
 
 namespace dotnet_rpg.Controllers
 {
@@ -14,6 +16,7 @@ namespace dotnet_rpg.Controllers
             _authRepo = authRepo;
         }
 
+        #region POST
         [HttpPost("Register")]
         public async Task<ActionResult<ServiceResponse<int>>> Register(UserRegisterDto request)
         {
@@ -37,5 +40,6 @@ namespace dotnet_rpg.Controllers
             }
             return Ok(response);
         }
+        #endregion
     }
 }

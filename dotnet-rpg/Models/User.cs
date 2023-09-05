@@ -1,5 +1,6 @@
 namespace dotnet_rpg.Models
 {
+    #region Properties User
     public class User
     {
         public int Id { get; set; }
@@ -8,4 +9,5 @@ namespace dotnet_rpg.Models
         public byte[] PasswordSalt { get; set; } = new byte[0];
         public List<Character>? Characters { get; set; }
     }
+    #endregion
 }

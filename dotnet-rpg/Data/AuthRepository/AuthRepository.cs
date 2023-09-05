@@ -1,18 +1,26 @@
+#region Usings
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+#endregion
 
 namespace dotnet_rpg.Data
 {
     public class AuthRepository : IAuthRepository
     {
+        #region Fields
         private readonly DataContext _context;
         private readonly IConfiguration _configuration;
+        #endregion
+
+        #region Ctor
         public AuthRepository(DataContext context, IConfiguration configuration)
         {
             _configuration = configuration;
             _context = context;
         }
+        #endregion
 
+        #region Merhods
         public async Task<ServiceResponse<string>> Login(string username, string password)
         {
             var response = new ServiceResponse<string>();
@@ -113,5 +121,6 @@ namespace dotnet_rpg.Data
 
             return tokenHandler.WriteToken(token);
         }
+        #endregion
     }
 }

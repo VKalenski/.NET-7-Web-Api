@@ -1,7 +1,10 @@
+#region Usings
 using System.Text.Json.Serialization;
+#endregion
 
 namespace dotnet_rpg.Models
 {
+    #region Properties RpgClass
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum RpgClass
     {
@@ -9,4 +12,5 @@ namespace dotnet_rpg.Models
         Mage = 2,
         Cleric = 3
     }
+    #endregion
 }

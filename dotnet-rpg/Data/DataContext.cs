@@ -7,6 +7,7 @@ namespace dotnet_rpg.Data
 
         }
 
+        #region ColumnsRequirements
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Skill>().HasData(
@@ -15,10 +16,13 @@ namespace dotnet_rpg.Data
                 new Skill { Id = 3, Name = "Blizzard", Damage = 50 }
             );
         }
+        #endregion
 
+        #region Tables
         public DbSet<Character> Characters => Set<Character>();
         public DbSet<User> Users => Set<User>();
         public DbSet<Weapon> Weapons => Set<Weapon>();
         public DbSet<Skill> Skills => Set<Skill>();
+        #endregion
     }
 }

@@ -1,5 +1,7 @@
+#region Usings
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+#endregion
 
 namespace dotnet_rpg.Controllers
 {
@@ -15,6 +17,7 @@ namespace dotnet_rpg.Controllers
             _characterService = characterService;
         }
 
+        #region GET
         [HttpGet("GetAll")]
         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> Get()
         {
@@ -26,13 +29,24 @@ namespace dotnet_rpg.Controllers
         {
             return Ok(await _characterService.GetCharacterById(id));
         }
+        #endregion
 
+        #region POST
         [HttpPost]
         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> AddCharacter(AddCharacterDto newCharacter)
         {
             return Ok(await _characterService.AddCharacter(newCharacter));
         }
 
+        [HttpPost("Skill")]
+        public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> AddCharacterSkill(
+            AddCharacterSkillDto newCharacterSkill)
+        {
+            return Ok(await _characterService.AddCharacterSkill(newCharacterSkill));
+        }
+        #endregion
+
+        #region PUT
         [HttpPut]
         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> UpdateCharacter(UpdateCharacterDto updatedCharacter)
         {
@@ -43,7 +57,9 @@ namespace dotnet_rpg.Controllers
             }
             return Ok(response);
         }
+        #endregion
 
+        #region Delete
         [HttpDelete("{id}")]
         public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> DeleteCharacter(int id)
         {
@@ -54,12 +70,6 @@ namespace dotnet_rpg.Controllers
             }
             return Ok(response);
         }
-
-        [HttpPost("Skill")]
-        public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> AddCharacterSkill(
-            AddCharacterSkillDto newCharacterSkill)
-        {
-            return Ok(await _characterService.AddCharacterSkill(newCharacterSkill));
-        }
+        #endregion
     }
 }

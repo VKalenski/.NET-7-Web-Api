@@ -6,17 +6,22 @@ namespace dotnet_rpg.Services.CharacterService
 {
     public class CharacterService : ICharacterService
     {
+        #region Fields
         private readonly IMapper _mapper;
         private readonly DataContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        #endregion
 
+        #region Ctor
         public CharacterService(IMapper mapper, DataContext context, IHttpContextAccessor httpContextAccessor)
         {
             _httpContextAccessor = httpContextAccessor;
             _context = context;
             _mapper = mapper;
         }
+        #endregion
 
+        #region Methods
         private int GetUserId() => int.Parse(_httpContextAccessor.HttpContext!.User
             .FindFirstValue(ClaimTypes.NameIdentifier)!);
 
@@ -160,5 +165,6 @@ namespace dotnet_rpg.Services.CharacterService
 
             return response;
         }
+        #endregion
     }
 }

@@ -1,9 +1,9 @@
+#region Usings
+using Serilog;
+#endregion
+
 namespace dotnet_rpg.Infrastructure.Extensions
 {
-    #region Usings
-    using Serilog;
-    using Microsoft.Extensions.Hosting;
-    #endregion
     public static class HostCollectionExtensions
     {
         #region Methods

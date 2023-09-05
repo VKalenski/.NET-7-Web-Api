@@ -6,15 +6,20 @@ namespace dotnet_rpg.Services.FightService
 {
     public class FightService : IFightService
     {
+        #region Fields
         private readonly DataContext _context;
         private readonly IMapper _mapper;
+        #endregion
 
+        #region Ctor
         public FightService(DataContext context, IMapper mapper)
         {
             _mapper = mapper;
             _context = context;
         }
+        #endregion
 
+        #region Methods
         public async Task<ServiceResponse<FightResultDto>> Fight(FightRequestDto request)
         {
             var response = new ServiceResponse<FightResultDto>
@@ -215,5 +220,6 @@ namespace dotnet_rpg.Services.FightService
 
             return response;
         }
+        #endregion
     }
 }
