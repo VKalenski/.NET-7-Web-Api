@@ -1,4 +1,6 @@
-namespace Controllers
+using Microsoft.AspNetCore.Authorization;
+
+namespace dotnet_rpg.Controllers
 {
     [Authorize]
     [ApiController]

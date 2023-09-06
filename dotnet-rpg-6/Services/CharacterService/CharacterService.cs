@@ -1,4 +1,6 @@
-namespace Service.CharacterService
+using System.Security.Claims;
+
+namespace dotnet_rpg.Service.CharacterService
 {
     public class CharacterService : ICharacterService
     {
@@ -36,8 +38,7 @@ namespace Service.CharacterService
 
             try
             {
-                Character character = await _context.Characters
-                    .FirstOrDefaultAsync(c => c.Id == id && c.User.Id == GetUserId());
+                Character character = await _context.Characters.FirstOrDefaultAsync(c => c.Id == id && c.User.Id == GetUserId());
 
                 if(character != null)
                 {

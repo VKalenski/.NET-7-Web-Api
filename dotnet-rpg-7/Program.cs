@@ -1,17 +1,17 @@
 #region Usings
 global using AutoMapper;
+global using dotnet_rpg.Data;
+global using dotnet_rpg.Dtos.Character;
+global using dotnet_rpg.Infrastructure.Extensions;
 global using dotnet_rpg.Models;
 global using dotnet_rpg.Services.CharacterService;
-global using dotnet_rpg.Dtos.Character;
-global using Microsoft.EntityFrameworkCore;
-global using dotnet_rpg.Data;
 global using dotnet_rpg.Services.FightService;
-global using Microsoft.IdentityModel.Tokens;
-global using Microsoft.AspNetCore.Authentication.JwtBearer;
-global using Microsoft.OpenApi.Models;
 global using dotnet_rpg.Services.WeaponService;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.IdentityModel.Tokens;
+global using Microsoft.OpenApi.Models;
 global using Swashbuckle.AspNetCore.Filters;
-global using dotnet_rpg.Infrastructure.Extensions;
 #endregion
 
 var builder = WebApplication.CreateBuilder(args);

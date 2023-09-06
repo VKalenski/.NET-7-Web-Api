@@ -1,4 +1,8 @@
-namespace _NET_6_Web_Api
+using dotnet_rpg.Dtos.Fight;
+using dotnet_rpg.Dtos.Skill;
+using dotnet_rpg.Dtos.Weapon;
+
+namespace dotnet_rpg
 {
     public class AutoMapperProfile : Profile
     {

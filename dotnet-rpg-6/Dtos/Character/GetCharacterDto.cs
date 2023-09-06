@@ -1,4 +1,7 @@
-namespace Dtos.Character
+using dotnet_rpg.Dtos.Skill;
+using dotnet_rpg.Dtos.Weapon;
+
+namespace dotnet_rpg.Dtos.Character
 {
     public class GetCharacterDto
     {

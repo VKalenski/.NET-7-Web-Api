@@ -1,4 +1,7 @@
-namespace Services.WeaponService
+using dotnet_rpg.Dtos.Weapon;
+using System.Security.Claims;
+
+namespace dotnet_rpg.Services.WeaponService
 {
     public class WeaponService : IWeaponService
     {

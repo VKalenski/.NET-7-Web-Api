@@ -1,24 +1,17 @@
 global using AutoMapper;
-global using Data;
-global using Dtos.Character;
-global using Dtos.Character.User;
-global using Dtos.Fight;
-global using Dtos.Skill;
-global using Dtos.Weapon;
+global using dotnet_rpg.Data;
+global using dotnet_rpg.Dtos.Character;
+global using dotnet_rpg.Infrastructure.Extensions;
+global using dotnet_rpg.Models;
+global using dotnet_rpg.Service.CharacterService;
+global using dotnet_rpg.Services.FightService;
+global using dotnet_rpg.Services.WeaponService;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
-global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.EntityFrameworkCore;
-global using Microsoft.Extensions.Configuration;
 global using Microsoft.IdentityModel.Tokens;
 global using Microsoft.OpenApi.Models;
-global using Models;
-global using Service.CharacterService;
-global using Services.FightService;
-global using Services.WeaponService;
 global using Swashbuckle.AspNetCore.Filters;
-global using System.IdentityModel.Tokens.Jwt;
-global using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -59,6 +52,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IWeaponService, WeaponService>();
 builder.Services.AddScoped<IFightService, FightService>();
 
+builder.Host.AddLogger(builder.Configuration);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

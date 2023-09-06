@@ -1,4 +1,7 @@
-namespace Data
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+
+namespace dotnet_rpg.Data
 {
     public class AuthRepository : IAuthRepository
     {

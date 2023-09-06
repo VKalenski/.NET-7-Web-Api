@@ -1,4 +1,6 @@
-namespace Controllers
+using dotnet_rpg.Dtos.Character.User;
+
+namespace dotnet_rpg.Controllers
 {
     [ApiController]
     [Route("[controller]")]

@@ -1,4 +1,4 @@
-namespace Service.CharacterService
+namespace dotnet_rpg.Service.CharacterService
 {
     public interface ICharacterService
     {
