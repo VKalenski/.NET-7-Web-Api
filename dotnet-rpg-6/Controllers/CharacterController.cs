@@ -73,6 +73,5 @@ namespace dotnet_rpg.Controllers
             return Ok(response);
         }
         #endregion
-
     }
 }

@@ -93,3 +93,9 @@ dotnet new .gitignore
 - dotnet add package Serilog.Sinks.BrowserConsole
 - dotnet add package Serilog.Sinks.ColoredConsole
 - dotnet add package Serilog.Sinks.Console
+
+---
+
+### **Flow of the program:**
+
+
