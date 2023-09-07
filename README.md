@@ -1,4 +1,27 @@
-# .NET-Web-Api
+﻿# .NET-Web-Api
+
+---
+
+### **Ingredients**
+
+1. .NET SDK (free):
+    - .NET Core 3.1 SDK (free): https://dotnet.microsoft.com/en-us/download/dotnet/3.1
+    - .NET 5 SDK (free): https://dotnet.microsoft.com/en-us/download/dotnet/5.0
+    - .NET 6 SDK (free): https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+    - .NET 7 SDK (free): https://dotnet.microsoft.com/en-us/download/dotnet/7.0
+2. Visual Studio Community (free): https://visualstudio.microsoft.com/downloads/
+3. VS Code (free): https://code.visualstudio.com/download
+4. Web Browser or API Client (Postman or Insomnia)
+    - Postman  (free): https://www.postman.com/downloads/
+    - Insomnia (free): https://insomnia.rest/download
+5. GitHub Desktop (free): https://desktop.github.com/
+6. SQL Server Management Studio (free):
+    - https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+    
+    *(or DBeaver for Linux or Mac users)*
+7. Docker (optional to set up SQL Server) (free): https://www.docker.com/products/docker-desktop/
+
+#### [🔼 Back to top](#dependency-injection)
 
 ---
 
@@ -12,6 +35,8 @@
 - *Use LINQ to filter, sort, map, select and access your entities.*
 - *Seed data with code-first migrations programmatically*
 
+#### [🔼 Back to top](#dependency-injection)
+
 ---
 
 ### **Web API:**
@@ -22,6 +47,8 @@
 - *The HTTP request methods GET, POST, PUT & DELETE*
 - *Best practices for your Web API like a ServiceResponse class and Data-Transfer-Objects (DTOs)*
 - *Map your models with AutoMapper*
+
+#### [🔼 Back to top](#dependency-injection)
 
 ---
 
@@ -34,6 +61,8 @@
 - *All previous HTTP requests with Entity Framework Core to save your data in a SQL Server database*
 - *Data Seeding: Insert data with a migration programmatically*
 
+#### [🔼 Back to top](#dependency-injection)
+
 ---
 
 ### **Authentication:**
@@ -43,6 +72,8 @@
 - *Secure controllers with the Authorize attribute*
 - *Add roles to the use*
 
+#### [🔼 Back to top](#dependency-injection)
+
 ---
 
 ### **Advanced Relationships with Entity Framework Core:**
@@ -50,6 +81,31 @@
 - One-to-one relationships
 - One-to-many relationships
 - Many-to-many relationships
+
+#### [🔼 Back to top](#dependency-injection)
+
+---
+
+### **Add packages:**
+
+- dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
+- dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+- dotnet add package Microsoft.AspNetCore.OpenApi
+- dotnet add package Microsoft.EntityFrameworkCore
+- dotnet add package Microsoft.EntityFrameworkCore.Design
+- dotnet add package Microsoft.EntityFrameworkCore.SQLServer
+- dotnet add package Serilog
+- dotnet add package Serilog.AspNetCore
+- dotnet add package Serilog.Enrichers.Environment
+- dotnet add package Serilog.Enrichers.Process
+- dotnet add package Serilog.Enrichers.Thread
+- dotnet add package Serilog.Extensions.Logging
+- dotnet add package Serilog.Settings.Configuration
+- dotnet add package Serilog.Sinks.BrowserConsole
+- dotnet add package Serilog.Sinks.ColoredConsole
+- dotnet add package Serilog.Sinks.Console
+
+#### [🔼 Back to top](#dependency-injection)
 
 ---
 
@@ -85,27 +141,35 @@ dotnet watch run
 dotnet new .gitignore
 ```
 
----
-
-### **Add packages:**
-
-- dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
-- dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
-- dotnet add package Microsoft.AspNetCore.OpenApi
-- dotnet add package Microsoft.EntityFrameworkCore
-- dotnet add package Microsoft.EntityFrameworkCore.Design
-- dotnet add package Microsoft.EntityFrameworkCore.SQLServer
-- dotnet add package Serilog
-- dotnet add package Serilog.AspNetCore
-- dotnet add package Serilog.Enrichers.Environment
-- dotnet add package Serilog.Enrichers.Process
-- dotnet add package Serilog.Enrichers.Thread
-- dotnet add package Serilog.Extensions.Logging
-- dotnet add package Serilog.Settings.Configuration
-- dotnet add package Serilog.Sinks.BrowserConsole
-- dotnet add package Serilog.Sinks.ColoredConsole
-- dotnet add package Serilog.Sinks.Console
+#### [🔼 Back to top](#dependency-injection)
 
 ---
+
+### **Create Migrations**
+
+> **Check .NET Entity Framework:**
+```
+dotnet-ef
+```
+
+> **Update dotnet-ef tool to last version:**
+```
+dotnet tool update --global dotnet-ef
+```
+
+> **Create first migration:**
+```
+dotnet-ef migrations add 'InitialCreate'
+```
+
+> **Update database:**
+```
+dotnet-ef database update
+```
+
+#### [🔼 Back to top](#data-transfer-objects)
+
+---
+
 
 ### **Flow of the program:**
