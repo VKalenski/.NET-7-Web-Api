@@ -1,7 +1,5 @@
 ﻿# .NET-Web-Api
 
----
-
 ### **Ingredients**
 
 1. .NET SDK (free):
@@ -25,7 +23,7 @@
 
 ---
 
-### **We will learn:**
+### **Include:**
 
 - *Build a complete .NET 7 back-end with Web API, Entity Framework Core, SQL Server*
 - *Implement Token Authentication with JSON Web Tokens & Roles*
@@ -170,6 +168,5 @@ dotnet-ef database update
 #### [🔼 Back to top](#data-transfer-objects)
 
 ---
-
 
 ### **Flow of the program:**
