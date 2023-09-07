@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-rpg-6", "dotnet-rpg-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-rpg-3.1", "dotnet-rpg-3.1\dotnet-rpg-3.1.csproj", "{76A2F39B-3B82-41DD-AC93-06CC218F3B52}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-rpg-5", "dotnet-rpg-5\dotnet-rpg-5.csproj", "{F6AE3583-63AA-43A3-A5D7-96C639AE3E05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{76A2F39B-3B82-41DD-AC93-06CC218F3B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76A2F39B-3B82-41DD-AC93-06CC218F3B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76A2F39B-3B82-41DD-AC93-06CC218F3B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6AE3583-63AA-43A3-A5D7-96C639AE3E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6AE3583-63AA-43A3-A5D7-96C639AE3E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6AE3583-63AA-43A3-A5D7-96C639AE3E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6AE3583-63AA-43A3-A5D7-96C639AE3E05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
