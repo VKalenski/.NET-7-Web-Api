@@ -1,8 +1,10 @@
+#region Usings
 using dotnet_rpg.Dtos.Fight;
 using dotnet_rpg.Dtos.Skill;
 using dotnet_rpg.Dtos.Weapon;
+#endregion
 
-namespace dotnet_rpg
+namespace Data
 {
     public class AutoMapperProfile : Profile
     {

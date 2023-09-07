@@ -1,4 +1,6 @@
+#region Usings
 using System.Text.Json.Serialization;
+#endregion
 
 namespace dotnet_rpg.Models
 {

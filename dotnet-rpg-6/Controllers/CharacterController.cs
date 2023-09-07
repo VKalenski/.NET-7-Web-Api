@@ -1,4 +1,6 @@
+#region Usings
 using Microsoft.AspNetCore.Authorization;
+#endregion
 
 namespace dotnet_rpg.Controllers
 {
@@ -7,29 +9,22 @@ namespace dotnet_rpg.Controllers
     [Route("api/[controller]")]
     public class CharacterController : ControllerBase
     {
+        #region Fields
         private readonly ICharacterService _characterService;
+        #endregion
 
+        #region Ctor
         public CharacterController(ICharacterService characterService)
         {
-            this._characterService = characterService;
+            _characterService = characterService;
         }
+        #endregion
 
+        #region GET
         [HttpGet("GetAll")]
         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> Get()
         {
             return Ok(await _characterService.GetAllCharacters());
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> Delete(int id)
-        {
-            var response = await _characterService.DeleteCharacter(id);
-            if(response == null)
-            {
-                return NotFound(response);
-            }
-
-            return Ok(response);
         }
 
         [HttpGet("{id}")]
@@ -37,23 +32,13 @@ namespace dotnet_rpg.Controllers
         {
             return Ok(await _characterService.GetCharacterById(id));
         }
+        #endregion
 
-        [HttpPost("controller")]
+        #region POST
+        [HttpPost]
         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> AddCharacter(AddCharacterDto newCharacter)
         {
             return Ok(await _characterService.AddCharacter(newCharacter));
-        }
-
-        [HttpPut]
-        public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> UpdateCharacter(UpdateCracterDto updatedCracter)
-        {
-            var response = await _characterService.UpdateCharacter(updatedCracter);
-            if(response == null)
-            {
-                return NotFound(response);
-            }
-
-            return Ok(response);
         }
 
         [HttpPost("Skill")]
@@ -61,5 +46,33 @@ namespace dotnet_rpg.Controllers
         {
             return Ok(await _characterService.AddCharacterSkill(newCharacterSkill));
         }
+        #endregion
+
+        #region PUT
+        [HttpPut]
+        public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> UpdateCharacter(UpdateCharacterDto updatedCharacter)
+        {
+            var response = await _characterService.UpdateCharacter(updatedCharacter);
+            if (response.Data == null)
+            {
+                return NotFound(response);
+            }
+            return Ok(response);
+        }
+        #endregion
+
+        #region DELETE
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> Delete(int id)
+        {
+            var response = await _characterService.DeleteCharacter(id);
+            if (response.Data == null)
+            {
+                return NotFound(response);
+            }
+            return Ok(response);
+        }
+        #endregion
+
     }
 }

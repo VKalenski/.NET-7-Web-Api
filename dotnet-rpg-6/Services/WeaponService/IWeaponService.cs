@@ -1,4 +1,6 @@
+#region Usings
 using dotnet_rpg.Dtos.Weapon;
+#endregion
 
 namespace dotnet_rpg.Services.WeaponService
 {

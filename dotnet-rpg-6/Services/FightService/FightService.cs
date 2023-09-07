@@ -1,18 +1,25 @@
+#region Usings
 using dotnet_rpg.Dtos.Fight;
+#endregion
 
 namespace dotnet_rpg.Services.FightService
 {
     public class FightService : IFightService
     {
+        #region Fields
         private readonly DataContext _context;
         private readonly IMapper _mapper;
+        #endregion
 
+        #region Ctor
         public FightService(DataContext context, IMapper mapper)
         {
-            _context = context;
             _mapper = mapper;
+            _context = context;
         }
+        #endregion
 
+        #region Methods
         public async Task<ServiceResponse<FightResultDto>> Fight(FightRequestDto request)
         {
             var response = new ServiceResponse<FightResultDto>
@@ -27,54 +34,54 @@ namespace dotnet_rpg.Services.FightService
                     .Include(c => c.Skills)
                     .Where(c => request.CharacterIds.Contains(c.Id)).ToListAsync();
 
-                    bool defeated = false;
-                    while(!defeated)
+                bool defeated = false;
+                while (!defeated)
+                {
+                    foreach (Character attacker in characters)
                     {
-                        foreach(Character attacker in characters)
+                        var opponents = characters.Where(c => c.Id != attacker.Id).ToList();
+                        var opponent = opponents[new Random().Next(opponents.Count)];
+
+                        int damage = 0;
+                        string attackUsed = string.Empty;
+
+                        bool useWeapon = new Random().Next(2) == 0;
+                        if (useWeapon)
                         {
-                            var opponents = characters.Where(c => c.Id != attacker.Id).ToList();
-                            var opponent = opponents[new Random().Next(opponents.Count)];
+                            attackUsed = attacker.Weapon.Name;
+                            damage = DoWeaponAttack(attacker, opponent);
+                        }
+                        else
+                        {
+                            var skill = attacker.Skills[new Random().Next(attacker.Skills.Count)];
+                            attackUsed = skill.Name;
+                            damage = DoSkillAttack(attacker, opponent, skill);
+                        }
 
-                            int damage = 0;
-                            string attackUsed = string.Empty;
+                        response.Data.Log
+                            .Add($"{attacker.Name} attacks {opponent.Name} using {attackUsed} with {(damage >= 0 ? damage : 0)} damage.");
 
-                            bool useWeapon = new Random().Next(2) == 0;
-                            if (useWeapon)
-                            {
-                                attackUsed = attacker.Weapon.Name;
-                                damage = DoWeaponAttack(attacker, opponent);
-                            }
-                            else
-                            {
-                                var skill = attacker.Skills[new Random().Next(attacker.Skills.Count)];
-                                attackUsed = skill.Name;
-                                damage = DoSkillAttack(attacker, opponent, skill);
-                            }
-
-                            response.Data.Log
-                                .Add($"{attacker.Name} attacks {opponent.Name} using {attackUsed} with {(damage >=0 ? damage : 0)} damage.");
-
-                            if(opponent.HitPoints <= 0)
-                            {
-                                defeated = true;
-                                attacker.Victories++;
-                                opponent.Defeats++;
-                                response.Data.Log.Add($"{opponent.Name} has been defeated!");
-                                response.Data.Log.Add($"{attacker.Name} wins with {attacker.HitPoints} HP left!");
-                                break;
-                            }
+                        if (opponent.HitPoints <= 0)
+                        {
+                            defeated = true;
+                            attacker.Victories++;
+                            opponent.Defeats++;
+                            response.Data.Log.Add($"{opponent.Name} has been defeated!");
+                            response.Data.Log.Add($"{attacker.Name} wins with {attacker.HitPoints} HP left!");
+                            break;
                         }
                     }
+                }
 
-                    characters.ForEach(c =>
-                    {
-                        c.Fights++;
-                        c.HitPoints = 100;
-                    });
+                characters.ForEach(c =>
+                {
+                    c.Fights++;
+                    c.HitPoints = 100;
+                });
 
-                    await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 response.Success = false;
                 response.Message = ex.Message;
@@ -85,15 +92,13 @@ namespace dotnet_rpg.Services.FightService
         public async Task<ServiceResponse<AttackResultDto>> SkillAttack(SkillAttackDto request)
         {
             var response = new ServiceResponse<AttackResultDto>();
-
             try
             {
                 var attacker = await _context.Characters
                     .Include(c => c.Skills)
                     .FirstOrDefaultAsync(c => c.Id == request.AttackerId);
-
                 var opponent = await _context.Characters
-                    .FirstOrDefaultAsync(c => c.Id == request.OpponentId);
+                   .FirstOrDefaultAsync(c => c.Id == request.OpponentId);
 
                 var skill = attacker.Skills.FirstOrDefault(s => s.Id == request.SkillId);
                 if (skill == null)
@@ -104,7 +109,8 @@ namespace dotnet_rpg.Services.FightService
                 }
 
                 int damage = DoSkillAttack(attacker, opponent, skill);
-                if (opponent.HitPoints == 0)
+
+                if (opponent.HitPoints <= 0)
                     response.Message = $"{opponent.Name} has been defeated!";
 
                 await _context.SaveChangesAsync();
@@ -139,17 +145,16 @@ namespace dotnet_rpg.Services.FightService
         public async Task<ServiceResponse<AttackResultDto>> WeaponAttack(WeaponAttackDto request)
         {
             var response = new ServiceResponse<AttackResultDto>();
-
             try
             {
                 var attacker = await _context.Characters
                     .Include(c => c.Weapon)
                     .FirstOrDefaultAsync(c => c.Id == request.AttackerId);
-
                 var opponent = await _context.Characters
-                    .FirstOrDefaultAsync(c => c.Id == request.OpponentId);
+                   .FirstOrDefaultAsync(c => c.Id == request.OpponentId);
                 int damage = DoWeaponAttack(attacker, opponent);
-                if (opponent.HitPoints == 0)
+
+                if (opponent.HitPoints <= 0)
                     response.Message = $"{opponent.Name} has been defeated!";
 
                 await _context.SaveChangesAsync();
@@ -189,12 +194,13 @@ namespace dotnet_rpg.Services.FightService
                 .ThenBy(c => c.Defeats)
                 .ToListAsync();
 
-                var response = new ServiceResponse<List<HighscoreDto>>
-                {
-                    Data = characters.Select(c => _mapper.Map<HighscoreDto>(c)).ToList()
-                };
+            var response = new ServiceResponse<List<HighscoreDto>>
+            {
+                Data = characters.Select(c => _mapper.Map<HighscoreDto>(c)).ToList()
+            };
 
-                return response;
+            return response;
         }
+        #endregion
     }
 }
