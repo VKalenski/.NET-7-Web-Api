@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace dotnet_rpg.Models
 {
+    #region Properties Character
     public class Character
     {
         public int Id { get; set; }
@@ -21,4 +22,5 @@ namespace dotnet_rpg.Models
         public int Victories { get; set; }
         public int Defeats { get; set; }
     }
+    #endregion
 }

@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace dotnet_rpg.Models
 {
+    #region Properties User
     public class User
     {
         public int Id { get; set; }
@@ -15,4 +16,5 @@ namespace dotnet_rpg.Models
         [Required]
         public string Role { get; set; }
     }
+    #endregion
 }
