@@ -51,10 +51,10 @@
 
 - *Build a complete .NET 7 back-end with Web API, Entity Framework Core, SQL Server*
 - *Implement Token Authentication with JSON Web Tokens & Roles*
-- *Utilize all three types of relationships in your database: one-to-one, one-to-many, many-to-many*
+- *Utilize all three types of relationships in database: one-to-one, one-to-many, many-to-many*
 - *Use the HTTP request methods GET, POST, PUT & DELETE*
-- *Implement best practices like a proper structure for your Web API, Dependency Injection, asynchronous calls with async/await and Data-Transfer-Objects (DTOs)*
-- *Use LINQ to filter, sort, map, select and access your entities.*
+- *Implement best practices like a proper structure for Web API, Dependency Injection, asynchronous calls with async/await and Data-Transfer-Objects (DTOs)*
+- *Use LINQ to filter, sort, map, select and access entities.*
 - *Seed data with code-first migrations programmatically*
 
 #### [🔼 Back to top](#dotnet-web-api)
@@ -67,8 +67,8 @@
 - *Create models and controllers*
 - *Attribute routing (with parameters)*
 - *The HTTP request methods GET, POST, PUT & DELETE*
-- *Best practices for your Web API like a ServiceResponse class and Data-Transfer-Objects (DTOs)*
-- *Map your models with AutoMapper*
+- *Best practices for Web API like a ServiceResponse class and Data-Transfer-Objects (DTOs)*
+- *Map models with AutoMapper*
 
 #### [🔼 Back to top](#dotnet-web-api)
 
@@ -80,7 +80,7 @@
 - *Code-First Migration*
 - *SQL Server Express*
 - *How to use a DataContext and a proper ConnectionString*
-- *All previous HTTP requests with Entity Framework Core to save your data in a SQL Server database*
+- *All previous HTTP requests with Entity Framework Core to save data in a SQL Server database*
 - *Data Seeding: Insert data with a migration programmatically*
 
 #### [🔼 Back to top](#dotnet-web-api)
@@ -100,9 +100,9 @@
 
 ### **Advanced Relationships EF Core:**
 
-- One-to-one relationships
-- One-to-many relationships
-- Many-to-many relationships
+- *One-to-one relationships*
+- *One-to-many relationships*
+- *Many-to-many relationships*
 
 #### [🔼 Back to top](#dotnet-web-api)
 
@@ -145,22 +145,22 @@ dotnet --version
 
 > **Create new web api v.3.1 (out of support):**
 ```
-dotnet new webapi -n dotnet-rpg --framework netcoreapp3.1
+dotnet new webapi -n dotnet-rpg-3.1 --framework netcoreapp3.1
 ```
 
 > **Create new web api v.5 (out of support):**
 ```
-dotnet new webapi -n dotnet-rpg --framework net5.0
+dotnet new webapi -n dotnet-rpg-5 --framework net5.0
 ```
 
 > **Create new web api v.6:**
 ```
-dotnet new webapi -n dotnet-rpg --framework net6.0
+dotnet new webapi -n dotnet-rpg-6 --framework net6.0
 ```
 
 > **Create new web api v.7:**
 ```
-dotnet new webapi -n dotnet-rpg --framework net7.0
+dotnet new webapi -n dotnet-rpg-7 --framework net7.0
 ```
 
 > **Build the project:**
@@ -250,6 +250,11 @@ dotnet-ef database update
 > **Create .dockerignore file:**
 ```
 New-Item .dockerignore
+```
+
+> **Check docker installation:**
+```
+docker
 ```
 
 > **Check docker version**

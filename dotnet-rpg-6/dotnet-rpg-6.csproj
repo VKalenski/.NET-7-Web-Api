@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>dotnet-rpg</RootNamespace>
+    <RootNamespace>dotnet_rpg</RootNamespace>
     <UserSecretsId>c8be1403-20c6-4247-83b7-33118c9c5da9</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
