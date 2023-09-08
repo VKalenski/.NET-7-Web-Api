@@ -1,5 +1,29 @@
 ﻿# .NET-Web-Api
 
+>[1. Ingredients](#ingredients)
+>
+>[2. Include](#include)
+>
+>[3. Web API](#web-api)
+>
+>[4. Entity Framework Core](#entity-framework-core)
+>
+>[5. Authentication](#authentication)
+>
+>[6. Advanced Relationships EF Core](#advanced-relationships-ef-core)
+>
+>[7. Add packages](#add-packages)
+>
+>[8. .NET Commands](#.net-commands)
+>
+>[9. Create Migrations](#create-migrations)
+>
+>[10. Flow Program](#flow-of-the-program)
+>
+>[11. Docker Hub](#docker-hub)
+
+---
+
 ### **Ingredients**
 
 1. .NET SDK (free):
@@ -19,7 +43,7 @@
     *(or DBeaver for Linux or Mac users)*
 7. Docker (optional to set up SQL Server) (free): https://www.docker.com/products/docker-desktop/
 
-#### [🔼 Back to top](#dependency-injection)
+#### [🔼 Back to top](#.net-web-api)
 
 ---
 
@@ -33,7 +57,7 @@
 - *Use LINQ to filter, sort, map, select and access your entities.*
 - *Seed data with code-first migrations programmatically*
 
-#### [🔼 Back to top](#dependency-injection)
+#### [🔼 Back to top](#.net-web-api)
 
 ---
 
@@ -46,7 +70,7 @@
 - *Best practices for your Web API like a ServiceResponse class and Data-Transfer-Objects (DTOs)*
 - *Map your models with AutoMapper*
 
-#### [🔼 Back to top](#dependency-injection)
+#### [🔼 Back to top](#.net-web-api)
 
 ---
 
@@ -59,7 +83,7 @@
 - *All previous HTTP requests with Entity Framework Core to save your data in a SQL Server database*
 - *Data Seeding: Insert data with a migration programmatically*
 
-#### [🔼 Back to top](#dependency-injection)
+#### [🔼 Back to top](#.net-web-api)
 
 ---
 
@@ -70,17 +94,17 @@
 - *Secure controllers with the Authorize attribute*
 - *Add roles to the use*
 
-#### [🔼 Back to top](#dependency-injection)
+#### [🔼 Back to top](#.net-web-api)
 
 ---
 
-### **Advanced Relationships with Entity Framework Core:**
+### **Advanced Relationships EF Core:**
 
 - One-to-one relationships
 - One-to-many relationships
 - Many-to-many relationships
 
-#### [🔼 Back to top](#dependency-injection)
+#### [🔼 Back to top](#.net-web-api)
 
 ---
 
@@ -103,11 +127,11 @@
 - dotnet add package Serilog.Sinks.ColoredConsole
 - dotnet add package Serilog.Sinks.Console
 
-#### [🔼 Back to top](#dependency-injection)
+#### [🔼 Back to top](#.net-web-api)
 
 ---
 
-### **Commands:**
+### **.NET Commands:**
 
 > Check dotnet installation:
 ```
@@ -139,11 +163,11 @@ dotnet watch run
 dotnet new .gitignore
 ```
 
-#### [🔼 Back to top](#dependency-injection)
+#### [🔼 Back to top](#.net-web-api)
 
 ---
 
-### **Create Migrations**
+### **Create Migrations:**
 
 > **Check .NET Entity Framework:**
 ```
@@ -165,11 +189,11 @@ dotnet-ef migrations add 'InitialCreate'
 dotnet-ef database update
 ```
 
-#### [🔼 Back to top](#data-transfer-objects)
+#### [🔼 Back to top](#.net-web-api)
 
 ---
 
-### **Flow of the program (Swagger or Postman collection):**
+### **Flow of the program:**
 	
 #### **JWT Bearer token is use in DotNet-RPG folder (for Postman collection)!*
 
@@ -201,3 +225,18 @@ dotnet-ef database update
 
 > **Weapon:**
 13. POST:   Weapon Add
+
+#### [🔼 Back to top](#.net-web-api)
+
+---
+
+### **Docker Hub:**
+
+Link: https://hub.docker.com/
+
+> **Docker commands:**
+```
+
+```
+
+#### [🔼 Back to top](#.net-web-api)
