@@ -1,11 +1,11 @@
 namespace dotnet_rpg.Models
 {
+    #region Properties ServiceResponse
     public class ServiceResponse<T>
     {
-        #region Properties ServiceResponse
         public T? Data { get; set; }
         public bool Success { get; set; } = true;
         public string Message { get; set; } = string.Empty;
-        #endregion
     }
+    #endregion
 }
