@@ -9,11 +9,16 @@ namespace dotnet_rpg.Controllers
     [Route("[controller]")]
     public class FightController : ControllerBase
     {
+        #region Fields
         private readonly IFightService _fightService;
+        #endregion
+
+        #region Ctor
         public FightController(IFightService fightService)
         {
             _fightService = fightService;
         }
+        #endregion
 
         #region GET
         [HttpGet]

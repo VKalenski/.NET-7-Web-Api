@@ -10,12 +10,16 @@ namespace dotnet_rpg.Controllers
     [Route("api/[controller]")]
     public class CharacterController : ControllerBase
     {
+        #region Fields
         private readonly ICharacterService _characterService;
+        #endregion
 
+        #region Ctor
         public CharacterController(ICharacterService characterService)
         {
             _characterService = characterService;
         }
+        #endregion
 
         #region GET
         [HttpGet("GetAll")]

@@ -10,12 +10,16 @@ namespace dotnet_rpg.Controllers
     [Route("[controller]")]
     public class AuthController : ControllerBase
     {
+        #region Fields
         private readonly IAuthRepository _authRepo;
+        #endregion
 
+        #region Ctor
         public AuthController(IAuthRepository authRepo)
         {
             _authRepo = authRepo;
         }
+        #endregion
 
         #region POST
         [HttpPost("Register")]

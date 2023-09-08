@@ -11,11 +11,16 @@ namespace dotnet_rpg.Controllers
     [Route("[controller]")]
     public class WeaponController : ControllerBase
     {
+        #region Fields
         private readonly IWeaponService _weaponService;
+        #endregion
+
+        #region Ctor
         public WeaponController(IWeaponService weaponService)
         {
             _weaponService = weaponService;
         }
+        #endregion
 
         #region POST
         [HttpPost]
