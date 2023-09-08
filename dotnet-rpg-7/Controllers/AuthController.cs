@@ -1,6 +1,7 @@
 #region Usings
 using Microsoft.AspNetCore.Mvc;
 using dotnet_rpg.Dtos.User;
+using dotnet_rpg.Services.AuthRepository;
 #endregion
 
 namespace dotnet_rpg.Controllers
