@@ -14,6 +14,7 @@ global using Microsoft.EntityFrameworkCore;
 global using Microsoft.IdentityModel.Tokens;
 global using Microsoft.OpenApi.Models;
 global using Swashbuckle.AspNetCore.Filters;
+using Services.AuthRepository;
 #endregion
 
 var builder = WebApplication.CreateBuilder(args);

@@ -169,4 +169,26 @@ dotnet-ef database update
 
 ---
 
-### **Flow of the program:**
+### **Flow of the program (Swagger or Postman file):**
+	
+#### **JWT Bearer token is use in DotNet-RPG folder!*
+
+1. Register
+2. Login -> JWT Bearer
+3. Character Get All
+4. Character Get By Id
+5. Character Add
+6. Character Skill
+7. Character Edit
+8. Character Delete By Id
+9. Fight Get All
+10. Fight
+11. Fight Weapon
+12. Fight Skill
+13. Weapon Add
+
+> About Postman file:
+- URL is localhost;
+- Separated by folders;
+- Added test data where is needed;
+- Added postman test.

@@ -1,4 +1,4 @@
-namespace Data.AuthRepository
+namespace dotnet_rpg.Services.AuthRepository
 {
     public interface IAuthRepository
     {

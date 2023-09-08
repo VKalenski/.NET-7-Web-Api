@@ -3,7 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 #endregion
 
-namespace Data.AuthRepository
+namespace dotnet_rpg.Services.AuthRepository
 {
     public class AuthRepository : IAuthRepository
     {

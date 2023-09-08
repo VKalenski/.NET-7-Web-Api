@@ -1,6 +1,6 @@
 #region Usings
-using Data.AuthRepository;
 using dotnet_rpg.Dtos.User;
+using Services.AuthRepository;
 #endregion
 
 namespace dotnet_rpg.Controllers
