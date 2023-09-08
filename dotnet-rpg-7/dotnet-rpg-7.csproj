@@ -35,8 +35,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.11" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include=".github\workflows\superlinter.yml" />
-  </ItemGroup>
-
 </Project>

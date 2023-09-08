@@ -1,4 +1,4 @@
-﻿# Web-Api
+﻿# DotNet-Web-Api
 
 >[1. Ingredients](#ingredients)
 >
@@ -43,7 +43,7 @@
     *(or DBeaver for Linux or Mac users)*
 7. Docker (optional to set up SQL Server) (free): https://www.docker.com/products/docker-desktop/
 
-#### [🔼 Back to top](#web-api)
+#### [🔼 Back to top](#dotnet-web-api)
 
 ---
 
@@ -57,7 +57,7 @@
 - *Use LINQ to filter, sort, map, select and access your entities.*
 - *Seed data with code-first migrations programmatically*
 
-#### [🔼 Back to top](#.net-web-api)
+#### [🔼 Back to top](#dotnet-web-api)
 
 ---
 
@@ -70,7 +70,7 @@
 - *Best practices for your Web API like a ServiceResponse class and Data-Transfer-Objects (DTOs)*
 - *Map your models with AutoMapper*
 
-#### [🔼 Back to top](#.net-web-api)
+#### [🔼 Back to top](#dotnet-web-api)
 
 ---
 
@@ -83,7 +83,7 @@
 - *All previous HTTP requests with Entity Framework Core to save your data in a SQL Server database*
 - *Data Seeding: Insert data with a migration programmatically*
 
-#### [🔼 Back to top](#.net-web-api)
+#### [🔼 Back to top](#dotnet-web-api)
 
 ---
 
@@ -94,7 +94,7 @@
 - *Secure controllers with the Authorize attribute*
 - *Add roles to the use*
 
-#### [🔼 Back to top](#.net-web-api)
+#### [🔼 Back to top](#dotnet-web-api)
 
 ---
 
@@ -104,7 +104,7 @@
 - One-to-many relationships
 - Many-to-many relationships
 
-#### [🔼 Back to top](#.net-web-api)
+#### [🔼 Back to top](#dotnet-web-api)
 
 ---
 
@@ -127,43 +127,58 @@
 - dotnet add package Serilog.Sinks.ColoredConsole
 - dotnet add package Serilog.Sinks.Console
 
-#### [🔼 Back to top](#.net-web-api)
+#### [🔼 Back to top](#dotnet-web-api)
 
 ---
 
 ### **.NET Commands:**
 
-> Check dotnet installation:
+> **Check dotnet installation:**
 ```
 dotnet
 ```
 
-> Check dotnet version:
+> **Check dotnet version:**
 ```
 dotnet --version
 ```
 
-> Create new web api:
+> **Create new web api v.3.1 (out of support):**
+```
+dotnet new webapi -n dotnet-rpg --framework netcoreapp3.1
+```
+
+> **Create new web api v.5 (out of support):**
+```
+dotnet new webapi -n dotnet-rpg --framework net5.0
+```
+
+> **Create new web api v.6:**
+```
+dotnet new webapi -n dotnet-rpg --framework net6.0
+```
+
+> **Create new web api v.7:**
 ```
 dotnet new webapi -n dotnet-rpg --framework net7.0
 ```
 
-> Build the project:
+> **Build the project:**
 ```
 dotnet build
 ```
 
-> Run the project:
+> **Run the project:**
 ```
 dotnet watch run
 ```
 
-> Add .gitignore file:
+> **Add .gitignore file:**
 ```
 dotnet new .gitignore
 ```
 
-#### [🔼 Back to top](#.net-web-api)
+#### [🔼 Back to top](#dotnet-web-api)
 
 ---
 
@@ -189,7 +204,7 @@ dotnet-ef migrations add 'InitialCreate'
 dotnet-ef database update
 ```
 
-#### [🔼 Back to top](#.net-web-api)
+#### [🔼 Back to top](#dotnet-web-api)
 
 ---
 
@@ -226,17 +241,74 @@ dotnet-ef database update
 > **Weapon:**
 13. POST:   Weapon Add
 
-#### [🔼 Back to top](#.net-web-api)
+#### [🔼 Back to top](#dotnet-web-api)
 
 ---
 
 ### **Docker Hub:**
 
-Link: https://hub.docker.com/
-
-> **Docker commands:**
+> **Create .dockerignore file:**
+```
+New-Item .dockerignore
 ```
 
+> **Check docker version**
+```
+docker --version
 ```
 
-#### [🔼 Back to top](#.net-web-api)
+> **Docker login:**
+```
+docker login
+```
+
+> **List all containers:**
+```
+docker ps --all
+```
+
+> **Build docker image:**
+```
+docker build -t vilislavkalenski/dotnet-rpg-7 .
+```
+
+> **Build docker image with latest version:**
+```
+docker build -t vilislavkalenski/dotnet-rpg-7:latest .
+```
+
+> **Scan docker image**
+```
+docker scout quickview
+```
+
+> **Cves about docker image:**
+```
+docker scout cves vilislavkalenski/dotnet-rpg-7
+```
+
+> **Recommendations about docker image:**
+```
+docker scout recommendations vilislavkalenski/dotnet-rpg-7
+```
+
+> **Run docker image:**
+```
+docker run vilislavkalenski/dotnet-rpg-7
+```
+
+> **Run docker image with current port:**
+```
+docker run -p 8080:80 vilislavkalenski/dotnet-rpg-7
+```
+
+> **Push docker image in personal DockerHub:**
+```
+docker push vilislavkalenski/dotnet-rpg-7
+```
+
+
+Link Docker Hub: https://hub.docker.com/
+Link to my personal public Docker Hub: https://hub.docker.com/u/vilislavkalenski
+
+#### [🔼 Back to top](#dotnet-web-api)

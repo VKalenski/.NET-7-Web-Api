@@ -1,22 +1,25 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
+# Dockerfile for .NET
 
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+# Step 1: Use the official .NET SDK image as the build environment
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
+# Step 2: Set the working directory inside the container
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-WORKDIR /src
-COPY ["dotnet-rpg.csproj", "."]
-RUN dotnet restore "./dotnet-rpg.csproj"
-COPY . .
-WORKDIR /src/.
-RUN dotnet build "dotnet-rpg.csproj" -c Release -o /app/build
+# Step 3: Copy the project files (e.g., .csproj) and restore dependencies
+COPY *.csproj ./
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish "dotnet-rpg.csproj" -c Release -o /app/publish /p:UseAppHost=false
+# Step 4: Copy the entire project directory and build the application
+COPY . ./
+RUN dotnet publish -c Release -o out
 
-FROM base AS final
+# Step 5: Create the runtime image using a smaller base image
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
+# Step 6: Set the working directory inside the container
 WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "dotnet-rpg.dll"]
+# Step 7: Copy the published output from the build environment
+COPY --from=build-env /app/out .
+# Step 8: Set the entry point for the application
+ENTRYPOINT ["dotnet", "dotnet-rpg-7.dll"]
