@@ -2,6 +2,7 @@ namespace dotnet_rpg.Models
 {
     public class Character
     {
+        #region Properties Character
         public int Id { get; set; }
         public string Name { get; set; } = "Frodo";
         public int HitPoints { get; set; } = 100;
@@ -15,5 +16,6 @@ namespace dotnet_rpg.Models
         public int Fights { get; set; }
         public int Victories { get; set; }
         public int Defeats { get; set; }
+        #endregion
     }
 }
