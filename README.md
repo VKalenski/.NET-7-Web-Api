@@ -187,8 +187,10 @@ dotnet-ef database update
 12. Fight Skill
 13. Weapon Add
 
-> About Postman file:
+> **About Postman file:**
 - URL is localhost;
 - Separated by folders;
 - Added test data where is needed;
 - Added postman test.
+
+#### **To use Postman file you must to import him in Postman and run dotnet-rpg with IIS Express.**
