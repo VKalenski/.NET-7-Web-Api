@@ -169,28 +169,35 @@ dotnet-ef database update
 
 ---
 
-### **Flow of the program (Swagger or Postman file):**
+### **Flow of the program (Swagger or Postman collection):**
 	
-#### **JWT Bearer token is use in DotNet-RPG folder!*
-
-1. Register
-2. Login -> JWT Bearer
-3. Character Get All
-4. Character Get By Id
-5. Character Add
-6. Character Skill
-7. Character Edit
-8. Character Delete By Id
-9. Fight Get All
-10. Fight
-11. Fight Weapon
-12. Fight Skill
-13. Weapon Add
+#### **JWT Bearer token is use in DotNet-RPG folder (for Postman collection)!*
 
 > **About Postman file:**
 - URL is localhost;
-- Separated by folders;
-- Added test data where is needed;
+- Controllers are separated by folders with HTTP requests;
+- Added test data in rows where is needed;
 - Added postman test.
 
-#### **To use Postman file you must to import him in Postman and run dotnet-rpg with IIS Express.**
+#### **To use Postman collection you must to import him in Postman, open project and make the migration and after that run dotnet-rpg with IIS Express.**
+
+> **Auth:**
+1.  POST:   Register
+2.  POST:   Login -> JWT Bearer
+
+> **Character:**
+3.  GET:    Character Get All
+4.  GET:    Character Get By Id
+5.  POST:   Character Add
+6.  POST:   Character Skill
+7.  PUT:    Character Edit
+8.  DELETE: Character Delete By Id
+
+> **Fight:**
+9.  GET:    Fight Get All
+10. POST:   Fight
+11. POST:   Fight Weapon
+12. POST:   Fight Skill
+
+> **Weapon:**
+13. POST:   Weapon Add
