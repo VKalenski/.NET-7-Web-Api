@@ -14,7 +14,7 @@
 >
 >[7. Add packages](#add-packages)
 >
->[8. .NET Commands](#.net-commands)
+>[8. .NET Commands](#dotnet-commands)
 >
 >[9. Create Migrations](#create-migrations)
 >
@@ -131,7 +131,7 @@
 
 ---
 
-### **.NET Commands:**
+### **DotNet Commands:**
 
 > **Check dotnet installation:**
 ```
@@ -307,8 +307,8 @@ docker run -p 8080:80 vilislavkalenski/dotnet-rpg-7
 docker push vilislavkalenski/dotnet-rpg-7
 ```
 
+> Link Docker Hub: https://hub.docker.com/
 
-Link Docker Hub: https://hub.docker.com/
-Link to my personal public Docker Hub: https://hub.docker.com/u/vilislavkalenski
+> Link to my personal public Docker Hub: https://hub.docker.com/u/vilislavkalenski
 
 #### [🔼 Back to top](#dotnet-web-api)
