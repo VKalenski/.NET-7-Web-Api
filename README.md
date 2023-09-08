@@ -1,4 +1,4 @@
-﻿# .NET-Web-Api
+﻿# Web-Api
 
 >[1. Ingredients](#ingredients)
 >
@@ -43,7 +43,7 @@
     *(or DBeaver for Linux or Mac users)*
 7. Docker (optional to set up SQL Server) (free): https://www.docker.com/products/docker-desktop/
 
-#### [🔼 Back to top](#.net-web-api)
+#### [🔼 Back to top](#web-api)
 
 ---
 
