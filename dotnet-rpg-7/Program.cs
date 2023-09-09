@@ -13,6 +13,7 @@ global using Microsoft.IdentityModel.Tokens;
 global using Microsoft.OpenApi.Models;
 global using Swashbuckle.AspNetCore.Filters;
 using dotnet_rpg.Services.AuthRepository;
+using Serilog;
 #endregion
 
 var builder = WebApplication.CreateBuilder(args);
@@ -56,6 +57,13 @@ builder.Services.AddScoped<IWeaponService, WeaponService>();
 builder.Services.AddScoped<IFightService, FightService>();
 
 builder.Host.AddLogger(builder.Configuration);
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("logs/myBeatifulCode-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

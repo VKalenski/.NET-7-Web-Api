@@ -1,6 +1,7 @@
 #region Usings
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 #endregion
 
 namespace dotnet_rpg.Controllers
@@ -46,7 +47,11 @@ namespace dotnet_rpg.Controllers
         public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> AddCharacterSkill(
             AddCharacterSkillDto newCharacterSkill)
         {
-            return Ok(await _characterService.AddCharacterSkill(newCharacterSkill));
+            var result = await _characterService.AddCharacterSkill(newCharacterSkill);
+
+            Log.Information("Character Skill => @result", result);
+
+            return result;
         }
         #endregion
 
