@@ -1,7 +1,3 @@
-#region Usings
-using Serilog;
-#endregion
-
 namespace dotnet_rpg.Infrastructure.Extensions
 {
     public static class HostCollectionExtensions

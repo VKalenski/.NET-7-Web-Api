@@ -60,10 +60,12 @@ namespace dotnet_rpg.Controllers
         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> UpdateCharacter(UpdateCharacterDto updatedCharacter)
         {
             var response = await _characterService.UpdateCharacter(updatedCharacter);
+
             if (response.Data is null)
             {
                 return NotFound(response);
             }
+
             return Ok(response);
         }
         #endregion
@@ -73,10 +75,12 @@ namespace dotnet_rpg.Controllers
         public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> DeleteCharacter(int id)
         {
             var response = await _characterService.DeleteCharacter(id);
+
             if (response.Data is null)
             {
                 return NotFound(response);
             }
+
             return Ok(response);
         }
         #endregion

@@ -31,6 +31,7 @@
     - .NET 5 SDK (free): https://dotnet.microsoft.com/en-us/download/dotnet/5.0
     - .NET 6 SDK (free): https://dotnet.microsoft.com/en-us/download/dotnet/6.0
     - .NET 7 SDK (free): https://dotnet.microsoft.com/en-us/download/dotnet/7.0
+    - .NET 8 SDK (free): https://dotnet.microsoft.com/en-us/download/dotnet/8.0
 2. Visual Studio Community (free): https://visualstudio.microsoft.com/downloads/
 3. VS Code (free): https://code.visualstudio.com/download
 4. Web Browser or API Client (Postman or Insomnia)
