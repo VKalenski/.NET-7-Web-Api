@@ -218,7 +218,7 @@ dotnet-ef database update
 - Added test data in rows where is needed;
 - Added postman test.
 
-#### **To use Postman collection you must to import him in Postman, open project and make the migration and after that run dotnet-rpg with IIS Express.**
+#### **To use Postman collection you must to import him in Postman, open project and make the migration and after that run dotnet-rpg with http, https or IIS Express.**
 
 > **Auth:**
 1.  POST:   Register
