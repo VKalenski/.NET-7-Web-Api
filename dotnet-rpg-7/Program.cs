@@ -4,6 +4,7 @@ global using dotnet_rpg.Data;
 global using dotnet_rpg.Dtos.Character;
 global using dotnet_rpg.Infrastructure.Extensions;
 global using dotnet_rpg.Models;
+global using dotnet_rpg.Services.AuthRepository;
 global using dotnet_rpg.Services.CharacterService;
 global using dotnet_rpg.Services.FightService;
 global using dotnet_rpg.Services.WeaponService;
@@ -11,9 +12,8 @@ global using Microsoft.AspNetCore.Authentication.JwtBearer;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.IdentityModel.Tokens;
 global using Microsoft.OpenApi.Models;
+global using Serilog;
 global using Swashbuckle.AspNetCore.Filters;
-using dotnet_rpg.Services.AuthRepository;
-using Serilog;
 #endregion
 
 var builder = WebApplication.CreateBuilder(args);
@@ -61,7 +61,7 @@ builder.Host.AddLogger(builder.Configuration);
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information()
     .WriteTo.Console()
-    .WriteTo.File("logs/myBeatifulCode-.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.File("logs/myBeatifulCode-.json", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
 var app = builder.Build();

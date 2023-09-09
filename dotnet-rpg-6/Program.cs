@@ -1,10 +1,10 @@
 #region Usings
 global using AutoMapper;
-global using Data.AuthRepository;
 global using dotnet_rpg.Data;
 global using dotnet_rpg.Dtos.Character;
 global using dotnet_rpg.Infrastructure.Extensions;
 global using dotnet_rpg.Models;
+global using dotnet_rpg.Services.AuthRepository;
 global using dotnet_rpg.Services.CharacterService;
 global using dotnet_rpg.Services.FightService;
 global using dotnet_rpg.Services.WeaponService;
@@ -14,7 +14,6 @@ global using Microsoft.EntityFrameworkCore;
 global using Microsoft.IdentityModel.Tokens;
 global using Microsoft.OpenApi.Models;
 global using Swashbuckle.AspNetCore.Filters;
-using Services.AuthRepository;
 #endregion
 
 var builder = WebApplication.CreateBuilder(args);
