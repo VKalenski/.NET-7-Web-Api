@@ -389,3 +389,5 @@ docker push vilislavkalenski/dotnet-rpg-7
 - Docker:
     - Create **Dockerfile**
     - Publish image in **Docker Hub**
+
+#### [🔼 Back to top](#dotnet-web-api)
