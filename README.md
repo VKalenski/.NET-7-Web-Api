@@ -14,13 +14,15 @@
 >
 >[7. Add packages](#add-packages)
 >
->[8. .NET Commands](#dotnet-commands)
+>[8. HTTP Request Methods](#http-request-methods)
 >
->[9. Create Migrations](#create-migrations)
+>[9. .NET Commands](#dotnet-commands)
 >
->[10. Flow Program](#flow-of-the-program)
+>[10. Create Migrations](#create-migrations)
 >
->[11. Docker Hub](#docker-hub)
+>[11. Flow Program](#flow-of-the-program)
+>
+>[12. Docker Hub](#docker-hub)
 
 ---
 
@@ -127,6 +129,21 @@
 - dotnet add package Serilog.Sinks.BrowserConsole
 - dotnet add package Serilog.Sinks.ColoredConsole
 - dotnet add package Serilog.Sinks.Console
+
+#### [🔼 Back to top](#dotnet-web-api)
+
+---
+
+### **HTTP Request Methods:**
+
+"[...] a set of request methods to indicate the desired action to be performed for a given resiurces."
+- POST, GET, PUT, DELETE
+- The POST method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server (CREATE).
+- The GET method requests a representation of the specified resource (READ).
+- The PUT method replaces all current representations of the target resource with the request payload (PUT).
+- The DELETE method deletes the specified resource (DELETE).
+
+CRUD operations: Create - Read - Update - Delete
 
 #### [🔼 Back to top](#dotnet-web-api)
 
