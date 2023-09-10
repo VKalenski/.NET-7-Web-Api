@@ -16,7 +16,7 @@
 >
 >[8. HTTP Request Methods](#http-request-methods)
 >
->[9. Authentication](#authentication)
+>[9. Authentication Theory](#authentication-theory)
 >
 >[10. .NET Commands](#dotnet-commands)
 >
@@ -153,7 +153,7 @@ CRUD operations: Create - Read - Update - Delete
 
 ---
 
-### **Authentication:**
+### **Authentication Theory:**
 
 **Decode Token:** https://jwt.io/
 
