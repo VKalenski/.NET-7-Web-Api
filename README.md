@@ -16,13 +16,15 @@
 >
 >[8. HTTP Request Methods](#http-request-methods)
 >
->[9. .NET Commands](#dotnet-commands)
+>[9. Authentication](#authentication)
 >
->[10. Create Migrations](#create-migrations)
+>[10. .NET Commands](#dotnet-commands)
 >
->[11. Flow Program](#flow-of-the-program)
+>[11. Create Migrations](#create-migrations)
 >
->[12. Docker Hub](#docker-hub)
+>[12. Flow Program](#flow-of-the-program)
+>
+>[13. Docker Hub](#docker-hub)
 
 ---
 
@@ -144,6 +146,36 @@
 - The DELETE method deletes the specified resource (DELETE).
 
 CRUD operations: Create - Read - Update - Delete
+
+#### [🔼 Back to top](#dotnet-web-api)
+
+---
+
+### **Authentication:**
+
+**Decode Token:** https://jwt.io/
+
+- Store password as a hashed value
+- Cryptography algorithm (e.g. HMACSHA512): Password -> Algorithm -> Hash
+
+**Authentication Repositories:**
+
+> Repositories are classes or components that encapsulate the logic required to access data sources. They centrallize common data access functionality, providing better maintainabillity and decoupling the infrastrucure or technology used to access databases from the domain model layer.
+> If you use an Object-Relational Mapper (ORM) line Entity Framework, the code that must be implemented is simplified, thanks to LINQ and strong typing. This lets you focus on the data persistence logic rather than on data access plumbing.
+
+**Token Authentication with JSON Web Tokens:**
+
+- Currently: Verification with username & password
+    - With every request. Web service is stateless.
+- Highly insecure
+- Token: long string with information/claims of user: "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIyIiwidW..."
+- Generated with private key on server
+- Hard to face/steal
+- Maybe invalid, thanks to expiration date
+- Safe to store in browser
+- Sent in header of every request
+- User is always authenticated
+
 
 #### [🔼 Back to top](#dotnet-web-api)
 

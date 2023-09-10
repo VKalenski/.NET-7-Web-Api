@@ -24,20 +24,20 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestData", "TestData", "{4596B7E1-1AD4-4EF9-BA60-29BA8553E01E}"
 	ProjectSection(SolutionItems) = preProject
 		TestData\01_Register.txt = TestData\01_Register.txt
-		02_Login.txt = 02_Login.txt
-		03_CharacterGetAll.txt = 03_CharacterGetAll.txt
-		04_CharacterGetById.txt = 04_CharacterGetById.txt
-		05_CharacterAdd.txt = 05_CharacterAdd.txt
-		06_CharacterSkill.txt = 06_CharacterSkill.txt
-		07_CharacterEdit.txt = 07_CharacterEdit.txt
-		08_CharacterDeleteById.txt = 08_CharacterDeleteById.txt
-		09_FightGetAll.txt = 09_FightGetAll.txt
-		10_Fight.txt = 10_Fight.txt
-		11_FightWeaponFirst.txt = 11_FightWeaponFirst.txt
-		12_FightWeaponSecond.txt = 12_FightWeaponSecond.txt
-		13_FightSkill.txt = 13_FightSkill.txt
-		14_WeaponAddFirst.txt = 14_WeaponAddFirst.txt
-		15_WeaponAddSecond.txt = 15_WeaponAddSecond.txt
+		TestData\02_Login.txt = TestData\02_Login.txt
+		TestData\03_CharacterGetAll.txt = TestData\03_CharacterGetAll.txt
+		TestData\04_CharacterGetById.txt = TestData\04_CharacterGetById.txt
+		TestData\05_CharacterAdd.txt = TestData\05_CharacterAdd.txt
+		TestData\06_CharacterSkill.txt = TestData\06_CharacterSkill.txt
+		TestData\07_CharacterEdit.txt = TestData\07_CharacterEdit.txt
+		TestData\08_CharacterDeleteById.txt = TestData\08_CharacterDeleteById.txt
+		TestData\09_FightGetAll.txt = TestData\09_FightGetAll.txt
+		TestData\10_Fight.txt = TestData\10_Fight.txt
+		TestData\11_FightWeaponFirst.txt = TestData\11_FightWeaponFirst.txt
+		TestData\12_FightWeaponSecond.txt = TestData\12_FightWeaponSecond.txt
+		TestData\13_FightSkill.txt = TestData\13_FightSkill.txt
+		TestData\14_WeaponAddFirst.txt = TestData\14_WeaponAddFirst.txt
+		TestData\15_WeaponAddSecond.txt = TestData\15_WeaponAddSecond.txt
 	EndProjectSection
 EndProject
 Global
