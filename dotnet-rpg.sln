@@ -21,6 +21,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-rpg-5", "dotnet-rpg-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-rpg-8", "dotnet-rpg-8\dotnet-rpg-8.csproj", "{8910F097-9EBD-4A56-99C6-B7B3CC45B22D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestData", "TestData", "{4596B7E1-1AD4-4EF9-BA60-29BA8553E01E}"
+	ProjectSection(SolutionItems) = preProject
+		TestData\01_Register.txt = TestData\01_Register.txt
+		02_Login.txt = 02_Login.txt
+		03_CharacterGetAll.txt = 03_CharacterGetAll.txt
+		04_CharacterGetById.txt = 04_CharacterGetById.txt
+		05_CharacterAdd.txt = 05_CharacterAdd.txt
+		06_CharacterSkill.txt = 06_CharacterSkill.txt
+		07_CharacterEdit.txt = 07_CharacterEdit.txt
+		08_CharacterDeleteById.txt = 08_CharacterDeleteById.txt
+		09_FightGetAll.txt = 09_FightGetAll.txt
+		10_Fight.txt = 10_Fight.txt
+		11_FightWeaponFirst.txt = 11_FightWeaponFirst.txt
+		12_FightWeaponSecond.txt = 12_FightWeaponSecond.txt
+		13_FightSkill.txt = 13_FightSkill.txt
+		14_WeaponAddFirst.txt = 14_WeaponAddFirst.txt
+		15_WeaponAddSecond.txt = 15_WeaponAddSecond.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +69,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4596B7E1-1AD4-4EF9-BA60-29BA8553E01E} = {9D3CE499-A412-46FB-9650-7268DD01586E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F47DD394-490B-4F08-8C95-7D31C6FEEB62}
