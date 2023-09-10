@@ -25,6 +25,8 @@
 >[12. Flow Program](#flow-of-the-program)
 >
 >[13. Docker Hub](#docker-hub)
+>
+>[14. Summary](#summary)
 
 ---
 
@@ -367,3 +369,23 @@ docker push vilislavkalenski/dotnet-rpg-7
 > Link to my personal public Docker Hub: https://hub.docker.com/u/vilislavkalenski
 
 #### [🔼 Back to top](#dotnet-web-api)
+
+---
+
+### **Summary:**
+
+- Implement a **.NET Web Api:**
+    - **CRUD** (Create, Read, Update, Delete)
+    - HTTP methods **GET, POST, PUT, DELETE**
+- Store data in **SQL Server** database:
+    - **Entity Framework Core**
+    - **Code-First Migration**
+- Token Authentication:
+    - **JSON Web Tokens**
+    - Password **hash** & **salt**
+- Advanced Releationships with EF Core:
+    - One-to-one, one-to-many, many-to-many
+- Automatic fights & highscore
+- Docker:
+    - Create **Dockerfile**
+    - Publish image in **Docker Hub**
