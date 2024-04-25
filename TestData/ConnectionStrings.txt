@@ -1,0 +1,15 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=.\\SqlExpress; Database=dotnet-rpg-7; Trusted_Connection=true; TrustServerCertificate=true;" // MSSQL
+    "DefaultConnection": "Host=localhost;Port=5432;Database=dotnet-rpg-7;Username=postgres;Password=123;" // Postgres
+  },
+  "AppSettings": {
+    "Token": "my top secret key"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  }
+}
