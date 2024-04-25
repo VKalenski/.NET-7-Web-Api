@@ -41,7 +41,7 @@ namespace dotnet_rpg.Controllers
         public async Task<ActionResult<ServiceResponse<int>>> Login(UserLoginDto request)
         {
             var response = await _authRepo.Login(request.Username, request.Password);
-            
+
             if(!response.Success)
             {
                 return BadRequest(response);
