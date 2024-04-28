@@ -20,7 +20,7 @@ namespace dotnet_rpg.Services.AuthRepository
         }
         #endregion
 
-        #region Merhods
+        #region Methods
         public async Task<ServiceResponse<string>> Login(string username, string password)
         {
             var response = new ServiceResponse<string>();
