@@ -5,9 +5,10 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>true</InvariantGlobalization>
-    <RootNamespace>dotnet_rpg_8</RootNamespace>
+    <RootNamespace>dotnet_rpg</RootNamespace>
     <UserSecretsId>b0e4d83b-e76b-45ac-b811-b9e7a44df4d0</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
