@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.dockerignore = .dockerignore
 		.gitignore = .gitignore
 		DotNet-RPG.postman_collection.json = DotNet-RPG.postman_collection.json
+		HowToUse.md = HowToUse.md
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -36,6 +37,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestData", "TestData", "{45
 		TestData\13_FightSkill.txt = TestData\13_FightSkill.txt
 		TestData\14_WeaponAddFirst.txt = TestData\14_WeaponAddFirst.txt
 		TestData\15_WeaponAddSecond.txt = TestData\15_WeaponAddSecond.txt
+		TestData\ConnectionStrings.txt = TestData\ConnectionStrings.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-rpg-8", "dotnet-rpg-8\dotnet-rpg-8.csproj", "{2407ED35-CE06-4E99-8370-1E221AAAF0AA}"
