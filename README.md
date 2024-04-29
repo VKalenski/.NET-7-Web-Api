@@ -46,7 +46,7 @@
 5. GitHub Desktop (free): https://desktop.github.com/
 6. SQL Server Management Studio (free):
     - https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
-    
+
     *(or DBeaver for Linux or Mac users)*
 7. Docker (optional to set up SQL Server) (free): https://www.docker.com/products/docker-desktop/
 
@@ -123,6 +123,8 @@
 - dotnet add package Microsoft.EntityFrameworkCore
 - dotnet add package Microsoft.EntityFrameworkCore.Design
 - dotnet add package Microsoft.EntityFrameworkCore.SQLServer
+- dotnet add package Npgsql
+- dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
 - dotnet add package Serilog
 - dotnet add package Serilog.AspNetCore
 - dotnet add package Serilog.Enrichers.Environment
@@ -133,6 +135,8 @@
 - dotnet add package Serilog.Sinks.BrowserConsole
 - dotnet add package Serilog.Sinks.ColoredConsole
 - dotnet add package Serilog.Sinks.Console
+- dotnet add package Swashbuckle.AspNetCore
+- dotnet add package Swashbuckle.AspNetCore.Filters
 
 #### [🔼 Back to top](#dotnet-web-api)
 
@@ -261,7 +265,7 @@ dotnet-ef database update
 ---
 
 ### **Flow of the program:**
-	
+
 #### **JWT Bearer token is use in DotNet-RPG folder (for Postman collection)!*
 
 > **About Postman file:**
