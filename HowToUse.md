@@ -17,7 +17,7 @@ The folder "Migrations" by default is empty
 ```builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));```
 
 **In appsettings.json:**
-```"ConnectionStrings": { "DefaultConnection": "Server=.\\SqlExpress; Database=dotnet-rpg-7; Trusted_Connection=true; TrustServerCertificate=true;" }```
+```"ConnectionStrings": { "DefaultConnection": "Server=.\\SqlExpress; Database=dotnet-rpg-8; Trusted_Connection=true; TrustServerCertificate=true;" }```
 
 **After change the rows run the below commands:**
 ```dotnet-ef migrations add 'Initial-create-mssql'```
@@ -32,7 +32,7 @@ The folder "Migrations" by default is empty
 ```builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));```
 
 **In appsettings.json:**
-```"ConnectionStrings": { "DefaultConnection": "Server=.\\SqlExpress; Database=dotnet-rpg-7; Trusted_Connection=true; TrustServerCertificate=true;" }```
+```"ConnectionStrings": { "DefaultConnection": "Server=.\\SqlExpress; Database=dotnet-rpg-8; Trusted_Connection=true; TrustServerCertificate=true;" }```
 
 **After change the rows run the below commands:**
 ```dotnet-ef migrations add 'Initial-create-postgres'```
